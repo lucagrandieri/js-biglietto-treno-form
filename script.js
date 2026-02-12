@@ -75,9 +75,9 @@ let userPrice = 0;
 calcButtonEl.addEventListener('click', function(){
     const defaultPrice = 0.21 * kmEl.value;
     
-    if (etaEl.value === 'u18') {
+    if (etaEl.value === 'UNDER18') {
     userPrice = defaultPrice * 0.80;
-}   else if (etaEl.value === 'o65') {
+}   else if (etaEl.value === 'OVER65') {
     userPrice = defaultPrice * 0.60;
 }   else {
     userPrice = defaultPrice;
