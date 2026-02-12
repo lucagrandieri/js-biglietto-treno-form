@@ -1,52 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Prezzo del biglietto del treno</title>
 </head>
-<body>
-    <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
-    <form>
-        <input id="userName" type="text" placeholder="Nome">
-        <input id="km" type="text" placeholder="Km">
-        <select name="eta" id="eta">
-            <option value="STANDARD">Standard</option>
-            <option value="UNDER18">U18</option>
-            <option value="OVER65">O65</option>
-        </select>
-        <button id="calcButton">Calcola</button>
-        <button id="deleteButton">Annulla</button>
-    </form>
-    <h2>IL TUO BIGLIETTO</h2>
-    <h3>DETTAGLIO PASSEGGERI</h2>
-    <div>
-        <h3>NOME PASSEGGERO</h2>
-        <p id="cardUserName"></p> <!-- Luca Grandieri -->
+
+<body class="page-body">
+    <div class="main-title-container">
+        <h2 class="main-title">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
     </div>
-    <table>
-  <thead>
-    <tr>
-      <th>Offerta</th>
-      <th>Carrozza</th>
-      <th>Codice CP</th>
-      <th>Costo biglietto</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td id="ticketType"></td> <!-- Biglietto Standard -->
-      <td id="carrozza"></td> <!-- 5 -->
-      <td id="codiceCp"></td> <!-- 92911 -->
-      <td id="finalPrice"></td> <!-- 2.10€ -->
-    </tr>
-  </tbody>
-</table>
-
     
+    <div class="form-section">
+        <form class="ticket-form">
+            <div class="input-group">
+                <label>Nome Cognome</label>
+                <input id="userName" type="text" placeholder="Nome">
+            </div>
+            <div class="input-group">
+                <label>Km da percorrere</label>
+                <input id="km" type="text" placeholder="Km">
+            </div>
+            <div class="input-group">
+                <label>Fascia d'età</label>
+                <select name="eta" id="eta">
+                    <option value="STANDARD">Standard</option>
+                    <option value="UNDER18">U18</option>
+                    <option value="OVER65">O65</option>
+                </select>
+            </div>
+            <div class="button-group">
+                <button id="calcButton" type="button" class="btn btn-calc">Calcola</button>
+                <button id="deleteButton" type="button" class="btn btn-cancel">Annulla</button>
+            </div>
+        </form>
+    </div>
 
+    <h2 class="section-title">IL TUO BIGLIETTO</h2>
+    
+    <div class="ticket-container">
+        <h3 class="detail-title">DETTAGLIO PASSEGGERI</h3>
         
-    
+        <div class="ticket-card">
+            <!-- Box Grigio a Sinistra -->
+            <div class="passenger-box">
+                <h4 class="passenger-label">NOME PASSEGGERO</h4>
+                <p id="cardUserName" class="passenger-name"></p> 
+            </div>
+
+            <!-- Tabella a Destra -->
+            <table class="ticket-table">
+                <thead>
+                    <tr>
+                        <th>Offerta</th>
+                        <th>Carrozza</th>
+                        <th>Codice CP</th>
+                        <th>Costo biglietto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="ticketType"></td>
+                        <td id="carrozza"></td>
+                        <td id="codiceCp"></td>
+                        <td id="finalPrice"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
     <script src="./script.js"></script>
 </body>
