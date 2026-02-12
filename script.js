@@ -29,26 +29,21 @@ console.log(userPrice); */
 
 const kmEl = document.getElementById('km')
 const etaEl = document.getElementById('eta')
-const standardEl = document.getElementById('standard')
-const u18El = document.getElementById('u18')
-const o65El = document.getElementById('o65')
 const calcButtonEl = document.getElementById('calcButton')
-
-// Prezzo base
-/* const defaultPrice = 0.21 * kmEl.value;
-console.log(defaultPrice); */
 
 // Prezzo User
 let userPrice = 0;
 
 calcButtonEl.addEventListener('click', function(){
     const defaultPrice = 0.21 * kmEl.value;
-    if (etaEl.value === u18El.value) {
+    
+    if (etaEl.value === 'u18') {
     userPrice = defaultPrice * 0.80
-} else if (etaEl.value === o65El.value) {
+}   else if (etaEl.value === 'o65') {
     userPrice = defaultPrice * 0.60
-} 
-    return defaultPrice
-})
-
+}   else {
+    userPrice = defaultPrice
+}  
 console.log(userPrice);
+ 
+})
