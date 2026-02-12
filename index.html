@@ -6,14 +6,47 @@
     <title>Document</title>
 </head>
 <body>
+    <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+    <form>
+        <input id="userName" type="text" placeholder="Nome">
+        <input id="km" type="text" placeholder="Km">
+        <select name="eta" id="eta">
+            <option value="standard">Standard</option>
+            <option value="u18">U18</option>
+            <option value="o65">O65</option>
+        </select>
+        <button id="calcButton">Calcola</button>
+        <button id="deleteButton">Annulla</button>
+    </form>
+    <h2>IL TUO BIGLIETTO</h2>
+    <h3>DETTAGLIO PASSEGGERI</h2>
+    <div>
+        <h3>NOME PASSEGGERO</h2>
+        <p id="cardUserName"></p> <!-- Luca Grandieri -->
+    </div>
+    <table>
+  <thead>
+    <tr>
+      <th>Offerta</th>
+      <th>Carrozza</th>
+      <th>Codice CP</th>
+      <th>Costo biglietto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="ticketType"></td> <!-- Biglietto Standard -->
+      <td id="carrozza"></td> <!-- 5 -->
+      <td id="codiceCp"></td> <!-- 92911 -->
+      <td id="finalPrice"></td> <!-- 2.10€ -->
+    </tr>
+  </tbody>
+</table>
 
-    <input id="km" type="text" placeholder="Km">
-    <select name="eta" id="eta">
-        <option id="standard" value="standard">Standard</option>
-        <option id="u18" value="u18">U18</option>
-        <option id="o65" value="o65">O65</option>
-    </select>
-    <button id="calcButton">Calcola</button>
+    
+
+        
+    
 
     <script src="./script.js"></script>
 </body>
