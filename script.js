@@ -24,6 +24,7 @@
 }
 console.log(userPrice); */
 
+//Milestone 1
 //Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente 
 //due input e un bottone (non stilizzati), realizziamo le specifiche scritte sopra. 
 //La risposta finale (o output) sarà anch’essa da scrivere in console.
@@ -49,6 +50,7 @@ console.log(userPrice);
  
 }) */
 
+//Milestone 2
 //Solo una volta che il milestone 1 sarà completo e funzionante allora realizzeremo un form 
 //in pagina in cui l’utente potrà inserire i dati e visualizzare il calcolo finale con il 
 //prezzo. 
@@ -74,22 +76,33 @@ calcButtonEl.addEventListener('click', function(){
     const defaultPrice = 0.21 * kmEl.value;
     
     if (etaEl.value === 'u18') {
-    userPrice = defaultPrice * 0.80
+    userPrice = defaultPrice * 0.80;
 }   else if (etaEl.value === 'o65') {
-    userPrice = defaultPrice * 0.60
+    userPrice = defaultPrice * 0.60;
 }   else {
-    userPrice = defaultPrice
+    userPrice = defaultPrice;
 }  
-console.log(userPrice);
-cardUserNameEl.innerHTML = userNameEl.value
-ticketTypeEl.innerHTML = etaEl.value
-carrozzaEl.innerHTML = Math.floor(Math.random() * 6) + 1
-codiceCpEl.innerHTML = Math.floor(Math.random() * 100000) + 1
-finalPriceEl.innerHTML = userPrice.toFixed(2) + '€'
+
+cardUserNameEl.innerHTML = userNameEl.value;
+ticketTypeEl.innerHTML = etaEl.value;
+carrozzaEl.innerHTML = Math.floor(Math.random() * 6) + 1;
+codiceCpEl.innerHTML = Math.floor(Math.random() * 100000) + 1;
+finalPriceEl.innerHTML = userPrice.toFixed(2) + '€';
 
 })
 
 const formEl = document.querySelector('form')
 formEl.addEventListener('submit', function(e){
     e.preventDefault()
+})
+
+deleteButtonEl.addEventListener('click', function() {
+    userNameEl.value = '';
+    kmEl.value = '';
+    cardUserNameEl.innerHTML = '';
+    ticketTypeEl.innerHTML = '';
+    carrozzaEl.innerHTML = '';
+    codiceCpEl.innerHTML = '';
+    finalPriceEl.innerHTML = '';
+
 })
